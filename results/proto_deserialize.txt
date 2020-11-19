@@ -1,0 +1,71 @@
+# JMH 1.12 (released 1693 days ago, please consider updating!)
+# VM version: JDK 1.8.0_202, VM 25.202-b08
+# VM invoker: C:\Program Files\Java\jdk1.8.0_202\jre\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.4\lib\idea_rt.jar=48347:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.4\bin -Dfile.encoding=UTF-8
+# Warmup: 5 iterations, 1 s each
+# Measurement: 7 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 4 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: protobuf.DeserializationProtobuf.deserializationThroughput
+
+# Run progress: 0,00% complete, ETA 00:00:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 142721,162 ops/s
+# Warmup Iteration   2: 528808,218 ops/s
+# Warmup Iteration   3: 563570,557 ops/s
+# Warmup Iteration   4: 566126,967 ops/s
+# Warmup Iteration   5: 564197,549 ops/s
+Iteration   1: 541912,650 ops/s
+Iteration   2: 539098,938 ops/s
+Iteration   3: 561784,096 ops/s
+Iteration   4: 542551,343 ops/s
+Iteration   5: 544211,232 ops/s
+Iteration   6: 540461,984 ops/s
+Iteration   7: 543320,684 ops/s
+
+
+Result "deserializationThroughput":
+  544762,990 ±(99.9%) 17341,093 ops/s [Average]
+  (min, avg, max) = (539098,938, 544762,990, 561784,096), stdev = 7699,553
+  CI (99.9%): [527421,897, 562104,083] (assumes normal distribution)
+
+
+# JMH 1.12 (released 1693 days ago, please consider updating!)
+# VM version: JDK 1.8.0_202, VM 25.202-b08
+# VM invoker: C:\Program Files\Java\jdk1.8.0_202\jre\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.4\lib\idea_rt.jar=48347:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.4\bin -Dfile.encoding=UTF-8
+# Warmup: 5 iterations, 1 s each
+# Measurement: 7 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 4 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: protobuf.DeserializationProtobuf.deserializationAvgTime
+
+# Run progress: 50,00% complete, ETA 00:00:12
+# Fork: 1 of 1
+# Warmup Iteration   1: ≈ 10⁻⁵ s/op
+# Warmup Iteration   2: ≈ 10⁻⁵ s/op
+# Warmup Iteration   3: ≈ 10⁻⁵ s/op
+# Warmup Iteration   4: ≈ 10⁻⁵ s/op
+# Warmup Iteration   5: ≈ 10⁻⁵ s/op
+Iteration   1: ≈ 10⁻⁵ s/op
+Iteration   2: ≈ 10⁻⁵ s/op
+Iteration   3: ≈ 10⁻⁵ s/op
+Iteration   4: ≈ 10⁻⁵ s/op
+Iteration   5: ≈ 10⁻⁵ s/op
+Iteration   6: ≈ 10⁻⁵ s/op
+Iteration   7: ≈ 10⁻⁵ s/op
+
+
+Result "deserializationAvgTime":
+  ≈ 10⁻⁵ s/op
+
+
+# Run complete. Total time: 00:00:25
+
+Benchmark                                           Mode  Cnt       Score       Error  Units
+DeserializationProtobuf.deserializationThroughput  thrpt    7  544762,990 ± 17341,093  ops/s
+DeserializationProtobuf.deserializationAvgTime      avgt    7      ≈ 10⁻⁵               s/op
+
+Process finished with exit code 0

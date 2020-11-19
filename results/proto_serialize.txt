@@ -1,0 +1,71 @@
+# JMH 1.12 (released 1693 days ago, please consider updating!)
+# VM version: JDK 1.8.0_202, VM 25.202-b08
+# VM invoker: C:\Program Files\Java\jdk1.8.0_202\jre\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.4\lib\idea_rt.jar=11581:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.4\bin -Dfile.encoding=UTF-8
+# Warmup: 5 iterations, 1 s each
+# Measurement: 7 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 4 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: protobuf.SerializationProtobuf.serializationThroughput
+
+# Run progress: 0,00% complete, ETA 00:00:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 2202757,828 ops/s
+# Warmup Iteration   2: 3106364,415 ops/s
+# Warmup Iteration   3: 3611137,830 ops/s
+# Warmup Iteration   4: 3463311,668 ops/s
+# Warmup Iteration   5: 3717674,235 ops/s
+Iteration   1: 3893158,786 ops/s
+Iteration   2: 3736099,674 ops/s
+Iteration   3: 3575822,231 ops/s
+Iteration   4: 3577700,003 ops/s
+Iteration   5: 3461873,038 ops/s
+Iteration   6: 3553132,944 ops/s
+Iteration   7: 3569488,385 ops/s
+
+
+Result "serializationThroughput":
+  3623896,437 ±(99.9%) 323458,834 ops/s [Average]
+  (min, avg, max) = (3461873,038, 3623896,437, 3893158,786), stdev = 143617,727
+  CI (99.9%): [3300437,603, 3947355,272] (assumes normal distribution)
+
+
+# JMH 1.12 (released 1693 days ago, please consider updating!)
+# VM version: JDK 1.8.0_202, VM 25.202-b08
+# VM invoker: C:\Program Files\Java\jdk1.8.0_202\jre\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.4\lib\idea_rt.jar=11581:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.4\bin -Dfile.encoding=UTF-8
+# Warmup: 5 iterations, 1 s each
+# Measurement: 7 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 4 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: protobuf.SerializationProtobuf.serializationAvgTime
+
+# Run progress: 50,00% complete, ETA 00:00:13
+# Fork: 1 of 1
+# Warmup Iteration   1: ≈ 10⁻⁶ s/op
+# Warmup Iteration   2: ≈ 10⁻⁶ s/op
+# Warmup Iteration   3: ≈ 10⁻⁶ s/op
+# Warmup Iteration   4: ≈ 10⁻⁶ s/op
+# Warmup Iteration   5: ≈ 10⁻⁶ s/op
+Iteration   1: ≈ 10⁻⁶ s/op
+Iteration   2: ≈ 10⁻⁶ s/op
+Iteration   3: ≈ 10⁻⁶ s/op
+Iteration   4: ≈ 10⁻⁶ s/op
+Iteration   5: ≈ 10⁻⁶ s/op
+Iteration   6: ≈ 10⁻⁶ s/op
+Iteration   7: ≈ 10⁻⁶ s/op
+
+
+Result "serializationAvgTime":
+  ≈ 10⁻⁶ s/op
+
+
+# Run complete. Total time: 00:00:26
+
+Benchmark                                       Mode  Cnt        Score        Error  Units
+SerializationProtobuf.serializationThroughput  thrpt    7  3623896,437 ± 323458,834  ops/s
+SerializationProtobuf.serializationAvgTime      avgt    7       ≈ 10⁻⁶                s/op
+
+Process finished with exit code 0

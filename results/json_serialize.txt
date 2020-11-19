@@ -1,0 +1,71 @@
+# JMH 1.12 (released 1693 days ago, please consider updating!)
+# VM version: JDK 1.8.0_202, VM 25.202-b08
+# VM invoker: C:\Program Files\Java\jdk1.8.0_202\jre\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.4\lib\idea_rt.jar=44498:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.4\bin -Dfile.encoding=UTF-8
+# Warmup: 5 iterations, 1 s each
+# Measurement: 7 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 4 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: json.SerializationJSON.serializationThroughput
+
+# Run progress: 0,00% complete, ETA 00:00:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 965090,695 ops/s
+# Warmup Iteration   2: 1243461,747 ops/s
+# Warmup Iteration   3: 1431602,596 ops/s
+# Warmup Iteration   4: 1242756,649 ops/s
+# Warmup Iteration   5: 1527632,380 ops/s
+Iteration   1: 1485783,121 ops/s
+Iteration   2: 1389755,398 ops/s
+Iteration   3: 1527769,047 ops/s
+Iteration   4: 1544817,133 ops/s
+Iteration   5: 1495358,543 ops/s
+Iteration   6: 1499988,354 ops/s
+Iteration   7: 1544342,685 ops/s
+
+
+Result "serializationThroughput":
+  1498259,183 ±(99.9%) 120243,744 ops/s [Average]
+  (min, avg, max) = (1389755,398, 1498259,183, 1544817,133), stdev = 53388,968
+  CI (99.9%): [1378015,439, 1618502,927] (assumes normal distribution)
+
+
+# JMH 1.12 (released 1693 days ago, please consider updating!)
+# VM version: JDK 1.8.0_202, VM 25.202-b08
+# VM invoker: C:\Program Files\Java\jdk1.8.0_202\jre\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.4\lib\idea_rt.jar=44498:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.4\bin -Dfile.encoding=UTF-8
+# Warmup: 5 iterations, 1 s each
+# Measurement: 7 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 4 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: json.SerializationJSON.serializationAvgTime
+
+# Run progress: 50,00% complete, ETA 00:00:13
+# Fork: 1 of 1
+# Warmup Iteration   1: ≈ 10⁻⁵ s/op
+# Warmup Iteration   2: ≈ 10⁻⁶ s/op
+# Warmup Iteration   3: ≈ 10⁻⁶ s/op
+# Warmup Iteration   4: ≈ 10⁻⁶ s/op
+# Warmup Iteration   5: ≈ 10⁻⁶ s/op
+Iteration   1: ≈ 10⁻⁶ s/op
+Iteration   2: ≈ 10⁻⁶ s/op
+Iteration   3: ≈ 10⁻⁶ s/op
+Iteration   4: ≈ 10⁻⁶ s/op
+Iteration   5: ≈ 10⁻⁶ s/op
+Iteration   6: ≈ 10⁻⁶ s/op
+Iteration   7: ≈ 10⁻⁶ s/op
+
+
+Result "serializationAvgTime":
+  ≈ 10⁻⁶ s/op
+
+
+# Run complete. Total time: 00:00:26
+
+Benchmark                                   Mode  Cnt        Score        Error  Units
+SerializationJSON.serializationThroughput  thrpt    7  1498259,183 ± 120243,744  ops/s
+SerializationJSON.serializationAvgTime      avgt    7       ≈ 10⁻⁶                s/op
+
+Process finished with exit code 0
