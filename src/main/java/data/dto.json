@@ -1,0 +1,32 @@
+{
+  "date": "18-11-2020",
+  "id": 666,
+  "user": {
+    "id": 24,
+    "name": "Jack",
+    "surname": "Bauer",
+    "languages": [
+      "English",
+      "German",
+      "Russian",
+      "Spanish",
+      "Serbian",
+      "Arabic"
+    ]
+  },
+  "status": "resolved",
+  "code": 55,
+  "building": {
+    "id": 934,
+    "name": "Hogwarts",
+    "country": "England",
+    "facultees": [
+      "Gryffindor",
+      "Slytherin",
+      "Hufflepuff",
+      "Ravenclaw"
+    ],
+    "isGood": "true",
+    "numStudents": 600
+  }
+}

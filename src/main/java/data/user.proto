@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package data;
+
+option java_package = "data";
+option java_outer_classname = "UserProtoDTO";
+
+message UserDTO {
+  required int32 id = 1;
+  required string name = 2;
+  required string surname = 3;
+  repeated string languages = 4;
+}

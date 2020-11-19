@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+package data;
+
+option java_package = "data";
+option java_outer_classname = "BuildingProtoDTO";
+
+message BuildingDTO {
+  required int32 id = 1;
+  required string name = 2;
+  required string country = 3;
+  repeated string facultees = 4;
+  required bool isGood = 5;
+  required int32 numStudents = 6;
+}
