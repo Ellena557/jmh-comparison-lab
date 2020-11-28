@@ -10,11 +10,12 @@ import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class DeserializationProtobuf {
 
+public class DeserializationProtobuf {
     private static ProtoDTO.UserDTO.Builder userBuilder = ProtoDTO.UserDTO.newBuilder()
             .setId(24)
             .setName("Jack")
@@ -42,17 +43,21 @@ public class DeserializationProtobuf {
 
     private static ProtoDTO.DTO dto = builder.build();
 
+    private static byte[] dataSerialize = dto.toByteArray();
+
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
-    public void deserializationThroughput() {
-        String res = XmlFormat.printToString(dto);
+    public void deserializationThroughput() throws IOException {
+        ProtoDTO.DTO res = ProtoDTO.DTO.parseFrom(dataSerialize);
     }
+
 
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
-    public void deserializationAvgTime() {
-        String res = XmlFormat.printToString(dto);
+    public void deserializationAvgTime() throws IOException {
+        ProtoDTO.DTO res = ProtoDTO.DTO.parseFrom(dataSerialize);
     }
+
 
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()

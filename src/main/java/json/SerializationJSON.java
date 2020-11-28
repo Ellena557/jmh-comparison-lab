@@ -1,5 +1,6 @@
 package json;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dto.DTO;
 import org.openjdk.jmh.annotations.Benchmark;
@@ -9,37 +10,27 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
-import org.openjdk.jmh.util.FileUtils;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.StringWriter;
+
 
 public class SerializationJSON {
 
     private static DTO dto = new DTO();
     private static ObjectMapper objectMapper = new ObjectMapper();
-    private static byte[] dataSerialize;
 
-    static {
-        try {
-            String path = "C:/Users/Elena/Desktop/Оптимизация программ/lab_jmh/src/main/java/data/dto.json";
-            dataSerialize = Files.readAllBytes(Paths.get(path));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
-    public void serializationThroughput() throws IOException {
-        DTO res = objectMapper.readValue(dataSerialize, DTO.class);
+    public void serializationThroughput() throws JsonProcessingException {
+        //System.out.println(objectMapper.writeValueAsString(dto));
+        String res = objectMapper.writeValueAsString(dto);
     }
 
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
-    public void serializationAvgTime() throws IOException {
-        DTO res = objectMapper.readValue(dataSerialize, DTO.class);
+    public void serializationAvgTime() throws JsonProcessingException {
+        String res = objectMapper.writeValueAsString(dto);
     }
 
 

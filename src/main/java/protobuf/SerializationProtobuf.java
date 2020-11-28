@@ -1,5 +1,6 @@
 package protobuf;
 
+import com.googlecode.protobuf.format.XmlFormat;
 import dto.ProtoDTO;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
@@ -9,11 +10,12 @@ import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+
 public class SerializationProtobuf {
+
     private static ProtoDTO.UserDTO.Builder userBuilder = ProtoDTO.UserDTO.newBuilder()
             .setId(24)
             .setName("Jack")
@@ -41,21 +43,17 @@ public class SerializationProtobuf {
 
     private static ProtoDTO.DTO dto = builder.build();
 
-    private static byte[] dataSerialize = dto.toByteArray();
-
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
-    public void serializationThroughput() throws IOException {
-        ProtoDTO.DTO res = ProtoDTO.DTO.parseFrom(dataSerialize);
+    public void serializationThroughput() {
+        String res = XmlFormat.printToString(dto);
     }
-
 
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
-    public void serializationAvgTime() throws IOException {
-        ProtoDTO.DTO res = ProtoDTO.DTO.parseFrom(dataSerialize);
+    public void serializationAvgTime() {
+        String res = XmlFormat.printToString(dto);
     }
-
 
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
